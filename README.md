@@ -12,6 +12,14 @@ A modern WinUI 3 control panel for Dell Alienware laptops, built on top of the
 
 ## English
 
+> [!WARNING]
+> **Project status**
+> - This project has **only been tested on an Alienware M16 R2**. Other models may
+>   work but are untested — use at your own risk.
+> - The code was written largely by **AI** and has not been fully reviewed.
+> - The project is **incomplete and not yet polished**; expect rough edges, bugs and
+>   breaking changes.
+
 ### Features
 
 - **Lights** — control AlienFX lighting per device and per light, with an on-screen
@@ -67,6 +75,12 @@ or the AlienFX-Tools authors. AlienFX-Tools is a separate project under its own 
 ---
 
 ## 简体中文
+
+> [!WARNING]
+> **项目状态**
+> - 本项目**仅在 Alienware M16 R2 上测试过**。其他型号可能可用但未经验证，请自行承担风险。
+> - 代码主要由 **AI** 编写，尚未经过完整审查。
+> - 项目**尚不完善**，可能存在粗糙之处、缺陷以及破坏性变更。
 
 ### 功能
 
