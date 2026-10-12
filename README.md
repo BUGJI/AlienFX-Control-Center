@@ -1,6 +1,6 @@
 # AlienFX Control Center
 
-[English](#english) | [简体中文](#简体中文)
+[简体中文](#简体中文) | [English](#english)
 
 A modern WinUI 3 control panel for Dell Alienware laptops, built on top of the
 [AlienFX-Tools](https://github.com/T-Troll/alienfx-tools) command-line utilities.
@@ -8,7 +8,69 @@ A modern WinUI 3 control panel for Dell Alienware laptops, built on top of the
 一款基于 [AlienFX-Tools](https://github.com/T-Troll/alienfx-tools) 命令行工具的
 戴尔外星人笔记本现代化 WinUI 3 控制面板。
 
+<img width="550" height="325" alt="image" src="https://github.com/user-attachments/assets/f4a7f4cf-049c-428c-9d77-9f837c330b5a" />
+
 ---
+
+## 简体中文
+
+> [!WARNING]
+> **项目状态**
+> - 本项目**仅在 Alienware M16 R2 上测试过**。其他型号可能可用但未经验证，请自行承担风险。
+> - 代码主要由 **AI** 编写，尚未经过完整审查。
+> - 项目**尚不完善**，可能存在粗糙之处、缺陷以及破坏性变更。
+
+### 功能
+
+- **灯光** — 按设备、按灯珠控制 AlienFX 灯光，并提供屏幕键盘矩阵用于单独选键。
+  - 范围预设：全部 / WASD / 方向键 / F 功能键。
+  - 内置取色器与快捷调色板。
+  - 可将检测到的灯光布局导出为 JSON，用于校准。
+- **风扇** — 监控风扇转速、最高转速与温度传感器，解锁风扇控制并应用自定义风扇转速百分比。
+- **设置** — 切换界面语言（English / 简体中文）、自动应用、主题、显示/隐藏原始调试输出、
+  重新匹配与管理设备校准配置，并指定 AlienFX-Tools 所在文件夹。
+- 支持按设备校准配置的导入与导出。
+
+### 环境要求
+
+- Windows 10 版本 1809（内部版本 17763）或更高。
+- 从源码构建需要 [.NET 10 SDK](https://dotnet.microsoft.com/download)。
+- 安装 [AlienFX-Tools](https://github.com/T-Troll/alienfx-tools)，其中包含
+  `alienfx-cli.exe` 与 `alienfan-cli.exe`。
+
+### 工具查找路径
+
+应用会按顺序自动查找命令行工具：
+
+1. **设置**中指定的文件夹（自定义路径）。
+2. `%LOCALAPPDATA%\AlienFX Tools`
+3. `%ProgramFiles%\AlienFX Tools`
+4. `%ProgramFiles(x86)%\AlienFX Tools`
+
+如果工具位于其它位置，请在 **设置 → 工具** 中手动选择对应文件夹。
+
+### 构建与运行
+
+```powershell
+dotnet build AlienFXControlCenter.csproj -c Debug
+dotnet run --project AlienFXControlCenter.csproj
+```
+
+### 技术栈
+
+- WinUI 3 / Windows App SDK（非打包、自包含）
+- CommunityToolkit.Mvvm
+- .NET 10，目标框架 `net10.0-windows`
+
+### 许可证
+
+本项目基于 [MIT 许可证](LICENSE) 发布。
+
+本项目为独立前端，与 Dell、Alienware 及 AlienFX-Tools 作者无关联。
+AlienFX-Tools 是遵循其自身许可证的独立项目。
+
+--- 
+
 
 ## English
 
@@ -71,62 +133,3 @@ Released under the [MIT License](LICENSE).
 
 This project is an independent front-end and is not affiliated with Dell, Alienware,
 or the AlienFX-Tools authors. AlienFX-Tools is a separate project under its own license.
-
----
-
-## 简体中文
-
-> [!WARNING]
-> **项目状态**
-> - 本项目**仅在 Alienware M16 R2 上测试过**。其他型号可能可用但未经验证，请自行承担风险。
-> - 代码主要由 **AI** 编写，尚未经过完整审查。
-> - 项目**尚不完善**，可能存在粗糙之处、缺陷以及破坏性变更。
-
-### 功能
-
-- **灯光** — 按设备、按灯珠控制 AlienFX 灯光，并提供屏幕键盘矩阵用于单独选键。
-  - 范围预设：全部 / WASD / 方向键 / F 功能键。
-  - 内置取色器与快捷调色板。
-  - 可将检测到的灯光布局导出为 JSON，用于校准。
-- **风扇** — 监控风扇转速、最高转速与温度传感器，解锁风扇控制并应用自定义风扇转速百分比。
-- **设置** — 切换界面语言（English / 简体中文）、自动应用、主题、显示/隐藏原始调试输出、
-  重新匹配与管理设备校准配置，并指定 AlienFX-Tools 所在文件夹。
-- 支持按设备校准配置的导入与导出。
-
-### 环境要求
-
-- Windows 10 版本 1809（内部版本 17763）或更高。
-- 从源码构建需要 [.NET 10 SDK](https://dotnet.microsoft.com/download)。
-- 安装 [AlienFX-Tools](https://github.com/T-Troll/alienfx-tools)，其中包含
-  `alienfx-cli.exe` 与 `alienfan-cli.exe`。
-
-### 工具查找路径
-
-应用会按顺序自动查找命令行工具：
-
-1. **设置**中指定的文件夹（自定义路径）。
-2. `%LOCALAPPDATA%\AlienFX Tools`
-3. `%ProgramFiles%\AlienFX Tools`
-4. `%ProgramFiles(x86)%\AlienFX Tools`
-
-如果工具位于其它位置，请在 **设置 → 工具** 中手动选择对应文件夹。
-
-### 构建与运行
-
-```powershell
-dotnet build AlienFXControlCenter.csproj -c Debug
-dotnet run --project AlienFXControlCenter.csproj
-```
-
-### 技术栈
-
-- WinUI 3 / Windows App SDK（非打包、自包含）
-- CommunityToolkit.Mvvm
-- .NET 10，目标框架 `net10.0-windows`
-
-### 许可证
-
-本项目基于 [MIT 许可证](LICENSE) 发布。
-
-本项目为独立前端，与 Dell、Alienware 及 AlienFX-Tools 作者无关联。
-AlienFX-Tools 是遵循其自身许可证的独立项目。
