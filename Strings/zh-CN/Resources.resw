@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Code-only strings -->
+  <data name="App_Title" xml:space="preserve"><value>AlienFX 控制中心</value></data>
+  <data name="Lights_WholeSystem" xml:space="preserve"><value>整个系统</value></data>
+  <data name="Lights_DeviceLabel" xml:space="preserve"><value>{0}（{1} 个灯）</value></data>
+  <data name="Matrix_NoSelection" xml:space="preserve"><value>未选择按键 —— 取色将应用于上方范围。</value></data>
+  <data name="Matrix_SelectedCount" xml:space="preserve"><value>已选择 {0} 个按键 —— 取色将应用于所选按键。</value></data>
+
+  <!-- XAML: shell -->
+  <data name="Nav_Lights.Content" xml:space="preserve"><value>灯效</value></data>
+  <data name="Nav_Fans.Content" xml:space="preserve"><value>风扇</value></data>
+
+  <!-- XAML: lights page -->
+  <data name="Lights_Title.Text" xml:space="preserve"><value>灯效</value></data>
+  <data name="Lights_Target.Header" xml:space="preserve"><value>目标</value></data>
+  <data name="Lights_Refresh.Content" xml:space="preserve"><value>刷新</value></data>
+  <data name="Lights_ExportLayout.Content" xml:space="preserve"><value>导出布局</value></data>
+  <data name="Lights_Scope.Text" xml:space="preserve"><value>范围：</value></data>
+  <data name="Lights_Scope_All.Content" xml:space="preserve"><value>全部</value></data>
+  <data name="Lights_Scope_Wasd.Content" xml:space="preserve"><value>WASD</value></data>
+  <data name="Lights_Scope_Arrows.Content" xml:space="preserve"><value>方向键</value></data>
+  <data name="Lights_Scope_FKeys.Content" xml:space="preserve"><value>F1-F12</value></data>
+  <data name="Lights_Color.Text" xml:space="preserve"><value>颜色</value></data>
+  <data name="Lights_Palette.Text" xml:space="preserve"><value>快捷颜色</value></data>
+  <data name="Lights_Selection.Text" xml:space="preserve"><value>选择</value></data>
+  <data name="Lights_Empty_Title.Text" xml:space="preserve"><value>未发现 AlienFX 设备</value></data>
+  <data name="Lights_Empty_Message.Text" xml:space="preserve"><value>请在设置中运行探测(probe)以检测灯效设备，然后刷新。</value></data>
+  <data name="Debug.Header" xml:space="preserve"><value>命令调试</value></data>
+
+  <!-- XAML: fans page -->
+  <data name="Fans_Title.Text" xml:space="preserve"><value>风扇</value></data>
+  <data name="Fans_Refresh.Content" xml:space="preserve"><value>刷新</value></data>
+  <data name="Fans_Unlock.Content" xml:space="preserve"><value>解锁</value></data>
+  <data name="Fans_Apply.Content" xml:space="preserve"><value>应用</value></data>
+  <data name="Fans_Temperatures.Text" xml:space="preserve"><value>温度</value></data>
+  <data name="Fans_Empty_Title.Text" xml:space="preserve"><value>未发现风扇硬件</value></data>
+  <data name="Fans_Empty_Message.Text" xml:space="preserve"><value>此系统未检测到兼容的风扇控制器。</value></data>
+
+  <!-- XAML: keyboard matrix -->
+  <data name="Matrix_SelectAll.Content" xml:space="preserve"><value>全选</value></data>
+  <data name="Matrix_Clear.Content" xml:space="preserve"><value>清除</value></data>
+  <data name="Matrix_OtherLights.Text" xml:space="preserve"><value>其他灯效</value></data>
+
+  <!-- XAML: settings -->
+  <data name="Settings_Title.Text" xml:space="preserve"><value>设置</value></data>
+  <data name="Settings_General.Text" xml:space="preserve"><value>常规</value></data>
+  <data name="Settings_Appearance.Text" xml:space="preserve"><value>外观</value></data>
+  <data name="Settings_Calibration.Text" xml:space="preserve"><value>机型校准</value></data>
+  <data name="Settings_Tools.Text" xml:space="preserve"><value>工具</value></data>
+  <data name="Settings_About.Text" xml:space="preserve"><value>关于</value></data>
+  <data name="Settings_Language.Header" xml:space="preserve"><value>语言</value></data>
+  <data name="Settings_Theme.Header" xml:space="preserve"><value>主题</value></data>
+  <data name="Settings_AutoApply.Content" xml:space="preserve"><value>启动时重新应用上次颜色</value></data>
+  <data name="Settings_ShowDebug.Content" xml:space="preserve"><value>显示命令调试面板</value></data>
+  <data name="Settings_Profile.Text" xml:space="preserve"><value>匹配到的机型</value></data>
+  <data name="Settings_ProfileSource.Text" xml:space="preserve"><value>来源</value></data>
+  <data name="Settings_ProfilePick.Header" xml:space="preserve"><value>机型</value></data>
+  <data name="Settings_ProfileRematch.Content" xml:space="preserve"><value>重新匹配</value></data>
+  <data name="Settings_ProfileExport.Content" xml:space="preserve"><value>导出档案</value></data>
+  <data name="Settings_ProfileImport.Content" xml:space="preserve"><value>导入档案</value></data>
+  <data name="Settings_ProfileReset.Content" xml:space="preserve"><value>清除覆盖</value></data>
+  <data name="Settings_ToolsFolder.Text" xml:space="preserve"><value>CLI 工具目录</value></data>
+  <data name="Settings_Browse.Content" xml:space="preserve"><value>浏览…</value></data>
+  <data name="Settings_Redetect.Content" xml:space="preserve"><value>重新检测</value></data>
+  <data name="Settings_Probe.Content" xml:space="preserve"><value>探测设备</value></data>
+  <data name="Settings_About_AppVersion.Text" xml:space="preserve"><value>应用版本</value></data>
+  <data name="Settings_About_CliVersion.Text" xml:space="preserve"><value>CLI 版本</value></data>
+  <data name="Settings_About_License.Text" xml:space="preserve"><value>许可</value></data>
+
+  <!-- Code-only: settings -->
+  <data name="Settings_Language_System" xml:space="preserve"><value>跟随系统语言</value></data>
+  <data name="Settings_Language_Chinese" xml:space="preserve"><value>简体中文</value></data>
+  <data name="Settings_Language_English" xml:space="preserve"><value>English</value></data>
+  <data name="Settings_Theme_System" xml:space="preserve"><value>跟随系统设置</value></data>
+  <data name="Settings_Theme_Light" xml:space="preserve"><value>浅色</value></data>
+  <data name="Settings_Theme_Dark" xml:space="preserve"><value>深色</value></data>
+  <data name="Settings_ProfileNone" xml:space="preserve"><value>未匹配到机型</value></data>
+  <data name="Settings_ProfileAuto" xml:space="preserve"><value>自动（按硬件）</value></data>
+  <data name="Settings_ProfileManual" xml:space="preserve"><value>手动指定</value></data>
+  <data name="Settings_ToolsFolderAuto" xml:space="preserve"><value>自动检测</value></data>
+  <data name="Settings_ToolsFolderMissing" xml:space="preserve"><value>未找到</value></data>
+  <data name="Settings_ProfileImported" xml:space="preserve"><value>档案已导入。</value></data>
+  <data name="Settings_ProfileImportFailed" xml:space="preserve"><value>导入失败：{0}</value></data>
+  <data name="Settings_ProfileExported" xml:space="preserve"><value>档案已导出到 {0}</value></data>
+  <data name="Settings_RestartTitle" xml:space="preserve"><value>需要重启</value></data>
+  <data name="Settings_RestartBody" xml:space="preserve"><value>语言更改将在重启应用后生效。</value></data>
+  <data name="Settings_RestartNow" xml:space="preserve"><value>立即重启</value></data>
+  <data name="Settings_RestartLater" xml:space="preserve"><value>稍后</value></data>
+  <data name="Settings_About_LicenseValue" xml:space="preserve"><value>本界面封装了 T-Troll 的 AlienFX Tools（MIT 许可）。</value></data>
+  <data name="Settings_ProbeRunning" xml:space="preserve"><value>正在探测设备…</value></data>
+  <data name="Settings_ProbeDone" xml:space="preserve"><value>探测完成。</value></data>
+  <data name="Settings_Rematched" xml:space="preserve"><value>已按当前硬件重新匹配。</value></data>
+  <data name="Settings_ResetDone" xml:space="preserve"><value>已清除手动机型覆盖。</value></data>
+  <data name="Settings_ToolsFolderUpdated" xml:space="preserve"><value>工具目录已更新。</value></data>
+
+  <!-- Code-only: dialogs -->
+  <data name="Dialog_ErrorTitle" xml:space="preserve"><value>出现问题</value></data>
+  <data name="Dialog_Close" xml:space="preserve"><value>关闭</value></data>
+
+  <!-- Code-only: status -->
+  <data name="Status_Ready" xml:space="preserve"><value>就绪。</value></data>
+  <data name="Status_ToolsMissing" xml:space="preserve"><value>未找到 {0}。是否已安装 AlienFX Tools？</value></data>
+  <data name="Status_NoDevices" xml:space="preserve"><value>未检测到 AlienFX 设备。请在设置中运行探测(probe)。</value></data>
+  <data name="Status_Detected" xml:space="preserve"><value>检测到 {0} 个设备，{1} 个灯。</value></data>
+  <data name="Status_StatusFailed" xml:space="preserve"><value>获取状态失败：{0}</value></data>
+  <data name="Status_AppliedWhole" xml:space="preserve"><value>已将 {0} 应用于整个系统。</value></data>
+  <data name="Status_ApplyFailed" xml:space="preserve"><value>应用失败：{0}</value></data>
+  <data name="Status_NoMatchingLights" xml:space="preserve"><value>所选范围内没有匹配的灯。</value></data>
+  <data name="Status_AppliedScope" xml:space="preserve"><value>已将 {0} 应用于 {2} 上的 {1} 个灯。</value></data>
+  <data name="Status_AppliedKeys" xml:space="preserve"><value>已将 {0} 应用于 {2} 上选中的 {1} 个按键。</value></data>
+  <data name="Status_SelectDeviceForKey" xml:space="preserve"><value>请选择一个具体设备以使用按键盘选灯。</value></data>
+  <data name="Status_ExportSelectDevice" xml:space="preserve"><value>请选择一个具体设备以导出其键盘布局。</value></data>
+  <data name="Status_ExportDone" xml:space="preserve"><value>布局已导出到 {0}</value></data>
+  <data name="Status_ExportFailed" xml:space="preserve"><value>导出失败：{0}</value></data>
+  <data name="Status_UnknownError" xml:space="preserve"><value>未知错误</value></data>
+  <data name="Status_FansLoaded" xml:space="preserve"><value>已加载。</value></data>
+  <data name="Status_FanSummary" xml:space="preserve"><value>{0} 个风扇，{1} 个传感器，{2} 个电源状态</value></data>
+  <data name="Status_NoFanHardware" xml:space="preserve"><value>未检测到兼容的风扇硬件。</value></data>
+  <data name="Status_LoadFailed" xml:space="preserve"><value>加载失败：{0}</value></data>
+  <data name="Status_NoFans" xml:space="preserve"><value>没有可控制的风扇。</value></data>
+  <data name="Status_FanBoostSet" xml:space="preserve"><value>风扇加速已设为 {0} %。</value></data>
+  <data name="Status_UnlockDone" xml:space="preserve"><value>手动控制已解锁。{0}</value></data>
+  <data name="Status_UnlockFailed" xml:space="preserve"><value>解锁失败：{0}</value></data>
+</root>

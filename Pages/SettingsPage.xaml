@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="AlienFXControlCenter.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:AlienFXControlCenter.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <StackPanel Padding="24,16,24,24" Spacing="14">
+            <TextBlock x:Uid="Settings_Title" Style="{StaticResource TitleTextBlockStyle}" />
+
+            <TextBlock Margin="0,8,0,0" x:Uid="Settings_General" Style="{StaticResource SubtitleTextBlockStyle}" />
+            <ComboBox
+                x:Name="LanguageBox"
+                MinWidth="280"
+                HorizontalAlignment="Left"
+                x:Uid="Settings_Language"
+                DisplayMemberPath="Label"
+                SelectionChanged="LanguageBox_SelectionChanged" />
+            <CheckBox x:Name="AutoApplyBox" x:Uid="Settings_AutoApply" Click="AutoApply_Click" />
+
+            <TextBlock Margin="0,8,0,0" x:Uid="Settings_Appearance" Style="{StaticResource SubtitleTextBlockStyle}" />
+            <ComboBox
+                x:Name="ThemeBox"
+                MinWidth="280"
+                HorizontalAlignment="Left"
+                x:Uid="Settings_Theme"
+                DisplayMemberPath="Label"
+                SelectionChanged="ThemeBox_SelectionChanged" />
+            <CheckBox x:Name="ShowDebugBox" x:Uid="Settings_ShowDebug" Click="ShowDebug_Click" />
+
+            <TextBlock Margin="0,8,0,0" x:Uid="Settings_Calibration" Style="{StaticResource SubtitleTextBlockStyle}" />
+            <TextBlock x:Uid="Settings_Profile" Opacity="0.7" />
+            <TextBlock x:Name="ProfileNameText" FontWeight="SemiBold" TextWrapping="Wrap" />
+            <TextBlock x:Uid="Settings_ProfileSource" Opacity="0.7" />
+            <TextBlock x:Name="ProfileSourceText" TextWrapping="Wrap" />
+            <ComboBox
+                x:Name="ProfileBox"
+                MinWidth="360"
+                HorizontalAlignment="Left"
+                x:Uid="Settings_ProfilePick"
+                DisplayMemberPath="Name"
+                SelectionChanged="ProfileBox_SelectionChanged" />
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <Button x:Uid="Settings_ProfileRematch" Click="Rematch_Click" />
+                <Button x:Uid="Settings_ProfileExport" Click="ExportProfile_Click" />
+                <Button x:Uid="Settings_ProfileImport" Click="ImportProfile_Click" />
+                <Button x:Uid="Settings_ProfileReset" Click="ResetProfile_Click" />
+            </StackPanel>
+
+            <TextBlock Margin="0,8,0,0" x:Uid="Settings_Tools" Style="{StaticResource SubtitleTextBlockStyle}" />
+            <TextBlock x:Uid="Settings_ToolsFolder" Opacity="0.7" />
+            <TextBlock x:Name="ToolsFolderText" TextWrapping="Wrap" />
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <Button x:Uid="Settings_Browse" Click="Browse_Click" />
+                <Button x:Uid="Settings_Redetect" Click="Redetect_Click" />
+                <Button x:Uid="Settings_Probe" Click="Probe_Click" />
+            </StackPanel>
+
+            <TextBlock Margin="0,8,0,0" x:Uid="Settings_About" Style="{StaticResource SubtitleTextBlockStyle}" />
+            <TextBlock x:Uid="Settings_About_AppVersion" Opacity="0.7" />
+            <TextBlock x:Name="AppVersionText" />
+            <TextBlock x:Uid="Settings_About_CliVersion" Opacity="0.7" />
+            <TextBlock x:Name="CliVersionText" />
+            <TextBlock x:Uid="Settings_About_License" Opacity="0.7" />
+            <TextBlock x:Name="LicenseText" TextWrapping="Wrap" />
+
+            <TextBlock
+                x:Name="StatusText"
+                Margin="0,8,0,0"
+                Opacity="0.8"
+                TextWrapping="Wrap" />
+        </StackPanel>
+    </ScrollViewer>
+</Page>

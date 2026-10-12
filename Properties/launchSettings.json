@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AlienFXControlCenter (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "AlienFXControlCenter (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

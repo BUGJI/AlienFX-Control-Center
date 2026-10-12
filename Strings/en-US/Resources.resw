@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Code-only strings -->
+  <data name="App_Title" xml:space="preserve"><value>AlienFX Control Center</value></data>
+  <data name="Lights_WholeSystem" xml:space="preserve"><value>Whole system</value></data>
+  <data name="Lights_DeviceLabel" xml:space="preserve"><value>{0} ({1} lights)</value></data>
+  <data name="Matrix_NoSelection" xml:space="preserve"><value>No keys selected — picks apply to the scope above.</value></data>
+  <data name="Matrix_SelectedCount" xml:space="preserve"><value>{0} key(s) selected — picks apply to the selection.</value></data>
+
+  <!-- XAML: shell -->
+  <data name="Nav_Lights.Content" xml:space="preserve"><value>Lights</value></data>
+  <data name="Nav_Fans.Content" xml:space="preserve"><value>Fans</value></data>
+
+  <!-- XAML: lights page -->
+  <data name="Lights_Title.Text" xml:space="preserve"><value>Lights</value></data>
+  <data name="Lights_Target.Header" xml:space="preserve"><value>Target</value></data>
+  <data name="Lights_Refresh.Content" xml:space="preserve"><value>Refresh</value></data>
+  <data name="Lights_ExportLayout.Content" xml:space="preserve"><value>Export layout</value></data>
+  <data name="Lights_Scope.Text" xml:space="preserve"><value>Scope:</value></data>
+  <data name="Lights_Scope_All.Content" xml:space="preserve"><value>All</value></data>
+  <data name="Lights_Scope_Wasd.Content" xml:space="preserve"><value>WASD</value></data>
+  <data name="Lights_Scope_Arrows.Content" xml:space="preserve"><value>Arrows</value></data>
+  <data name="Lights_Scope_FKeys.Content" xml:space="preserve"><value>F1-F12</value></data>
+  <data name="Lights_Color.Text" xml:space="preserve"><value>Color</value></data>
+  <data name="Lights_Palette.Text" xml:space="preserve"><value>Quick colors</value></data>
+  <data name="Lights_Selection.Text" xml:space="preserve"><value>Selection</value></data>
+  <data name="Lights_Empty_Title.Text" xml:space="preserve"><value>No AlienFX devices</value></data>
+  <data name="Lights_Empty_Message.Text" xml:space="preserve"><value>Run a probe from Settings to detect light devices, then refresh.</value></data>
+  <data name="Debug.Header" xml:space="preserve"><value>Command debug</value></data>
+
+  <!-- XAML: fans page -->
+  <data name="Fans_Title.Text" xml:space="preserve"><value>Fans</value></data>
+  <data name="Fans_Refresh.Content" xml:space="preserve"><value>Refresh</value></data>
+  <data name="Fans_Unlock.Content" xml:space="preserve"><value>Unlock</value></data>
+  <data name="Fans_Apply.Content" xml:space="preserve"><value>Apply</value></data>
+  <data name="Fans_Temperatures.Text" xml:space="preserve"><value>Temperatures</value></data>
+  <data name="Fans_Empty_Title.Text" xml:space="preserve"><value>No fan hardware</value></data>
+  <data name="Fans_Empty_Message.Text" xml:space="preserve"><value>No compatible fan controller was detected on this system.</value></data>
+
+  <!-- XAML: keyboard matrix -->
+  <data name="Matrix_SelectAll.Content" xml:space="preserve"><value>Select all</value></data>
+  <data name="Matrix_Clear.Content" xml:space="preserve"><value>Clear</value></data>
+  <data name="Matrix_OtherLights.Text" xml:space="preserve"><value>Other lights</value></data>
+
+  <!-- XAML: settings -->
+  <data name="Settings_Title.Text" xml:space="preserve"><value>Settings</value></data>
+  <data name="Settings_General.Text" xml:space="preserve"><value>General</value></data>
+  <data name="Settings_Appearance.Text" xml:space="preserve"><value>Appearance</value></data>
+  <data name="Settings_Calibration.Text" xml:space="preserve"><value>Model calibration</value></data>
+  <data name="Settings_Tools.Text" xml:space="preserve"><value>Tools</value></data>
+  <data name="Settings_About.Text" xml:space="preserve"><value>About</value></data>
+  <data name="Settings_Language.Header" xml:space="preserve"><value>Language</value></data>
+  <data name="Settings_Theme.Header" xml:space="preserve"><value>Theme</value></data>
+  <data name="Settings_AutoApply.Content" xml:space="preserve"><value>Re-apply last color on startup</value></data>
+  <data name="Settings_ShowDebug.Content" xml:space="preserve"><value>Show command debug panel</value></data>
+  <data name="Settings_Profile.Text" xml:space="preserve"><value>Matched model</value></data>
+  <data name="Settings_ProfileSource.Text" xml:space="preserve"><value>Source</value></data>
+  <data name="Settings_ProfilePick.Header" xml:space="preserve"><value>Model</value></data>
+  <data name="Settings_ProfileRematch.Content" xml:space="preserve"><value>Match again</value></data>
+  <data name="Settings_ProfileExport.Content" xml:space="preserve"><value>Export profile</value></data>
+  <data name="Settings_ProfileImport.Content" xml:space="preserve"><value>Import profile</value></data>
+  <data name="Settings_ProfileReset.Content" xml:space="preserve"><value>Clear override</value></data>
+  <data name="Settings_ToolsFolder.Text" xml:space="preserve"><value>CLI tools folder</value></data>
+  <data name="Settings_Browse.Content" xml:space="preserve"><value>Browse…</value></data>
+  <data name="Settings_Redetect.Content" xml:space="preserve"><value>Detect again</value></data>
+  <data name="Settings_Probe.Content" xml:space="preserve"><value>Probe devices</value></data>
+  <data name="Settings_About_AppVersion.Text" xml:space="preserve"><value>App version</value></data>
+  <data name="Settings_About_CliVersion.Text" xml:space="preserve"><value>CLI version</value></data>
+  <data name="Settings_About_License.Text" xml:space="preserve"><value>License</value></data>
+
+  <!-- Code-only: settings -->
+  <data name="Settings_Language_System" xml:space="preserve"><value>Use system language</value></data>
+  <data name="Settings_Language_Chinese" xml:space="preserve"><value>简体中文</value></data>
+  <data name="Settings_Language_English" xml:space="preserve"><value>English</value></data>
+  <data name="Settings_Theme_System" xml:space="preserve"><value>Use system setting</value></data>
+  <data name="Settings_Theme_Light" xml:space="preserve"><value>Light</value></data>
+  <data name="Settings_Theme_Dark" xml:space="preserve"><value>Dark</value></data>
+  <data name="Settings_ProfileNone" xml:space="preserve"><value>No model matched</value></data>
+  <data name="Settings_ProfileAuto" xml:space="preserve"><value>Auto (by hardware)</value></data>
+  <data name="Settings_ProfileManual" xml:space="preserve"><value>Manual</value></data>
+  <data name="Settings_ToolsFolderAuto" xml:space="preserve"><value>Auto-detected</value></data>
+  <data name="Settings_ToolsFolderMissing" xml:space="preserve"><value>Not found</value></data>
+  <data name="Settings_ProfileImported" xml:space="preserve"><value>Profile imported.</value></data>
+  <data name="Settings_ProfileImportFailed" xml:space="preserve"><value>Import failed: {0}</value></data>
+  <data name="Settings_ProfileExported" xml:space="preserve"><value>Profile exported to {0}</value></data>
+  <data name="Settings_RestartTitle" xml:space="preserve"><value>Restart required</value></data>
+  <data name="Settings_RestartBody" xml:space="preserve"><value>The language change will take effect after restarting the app.</value></data>
+  <data name="Settings_RestartNow" xml:space="preserve"><value>Restart now</value></data>
+  <data name="Settings_RestartLater" xml:space="preserve"><value>Later</value></data>
+  <data name="Settings_About_LicenseValue" xml:space="preserve"><value>This UI wraps AlienFX Tools by T-Troll (MIT).</value></data>
+  <data name="Settings_ProbeRunning" xml:space="preserve"><value>Probing for devices…</value></data>
+  <data name="Settings_ProbeDone" xml:space="preserve"><value>Probe finished.</value></data>
+  <data name="Settings_Rematched" xml:space="preserve"><value>Re-matched current hardware.</value></data>
+  <data name="Settings_ResetDone" xml:space="preserve"><value>Manual model override cleared.</value></data>
+  <data name="Settings_ToolsFolderUpdated" xml:space="preserve"><value>Tools folder updated.</value></data>
+
+  <!-- Code-only: dialogs -->
+  <data name="Dialog_ErrorTitle" xml:space="preserve"><value>Something went wrong</value></data>
+  <data name="Dialog_Close" xml:space="preserve"><value>Close</value></data>
+
+  <!-- Code-only: status -->
+  <data name="Status_Ready" xml:space="preserve"><value>Ready.</value></data>
+  <data name="Status_ToolsMissing" xml:space="preserve"><value>{0} not found. Is AlienFX Tools installed?</value></data>
+  <data name="Status_NoDevices" xml:space="preserve"><value>No AlienFX devices detected. Run probe from Settings.</value></data>
+  <data name="Status_Detected" xml:space="preserve"><value>Detected {0} device(s), {1} light(s).</value></data>
+  <data name="Status_StatusFailed" xml:space="preserve"><value>Status failed: {0}</value></data>
+  <data name="Status_AppliedWhole" xml:space="preserve"><value>Applied {0} to whole system.</value></data>
+  <data name="Status_ApplyFailed" xml:space="preserve"><value>Apply failed: {0}</value></data>
+  <data name="Status_NoMatchingLights" xml:space="preserve"><value>No matching lights for the selected group.</value></data>
+  <data name="Status_AppliedScope" xml:space="preserve"><value>Applied {0} to {1} light(s) on {2}.</value></data>
+  <data name="Status_AppliedKeys" xml:space="preserve"><value>Applied {0} to {1} selected key(s) on {2}.</value></data>
+  <data name="Status_SelectDeviceForKey" xml:space="preserve"><value>Select a device to use per-key selection.</value></data>
+  <data name="Status_ExportSelectDevice" xml:space="preserve"><value>Select a specific device to export its keyboard layout.</value></data>
+  <data name="Status_ExportDone" xml:space="preserve"><value>Layout exported to {0}</value></data>
+  <data name="Status_ExportFailed" xml:space="preserve"><value>Export failed: {0}</value></data>
+  <data name="Status_UnknownError" xml:space="preserve"><value>unknown error</value></data>
+  <data name="Status_FansLoaded" xml:space="preserve"><value>Loaded.</value></data>
+  <data name="Status_FanSummary" xml:space="preserve"><value>{0} fan(s), {1} sensor(s), {2} power state(s)</value></data>
+  <data name="Status_NoFanHardware" xml:space="preserve"><value>No compatible fan hardware detected.</value></data>
+  <data name="Status_LoadFailed" xml:space="preserve"><value>Load failed: {0}</value></data>
+  <data name="Status_NoFans" xml:space="preserve"><value>No fans available to control.</value></data>
+  <data name="Status_FanBoostSet" xml:space="preserve"><value>Fan boost set to {0} %.</value></data>
+  <data name="Status_UnlockDone" xml:space="preserve"><value>Manual control unlocked. {0}</value></data>
+  <data name="Status_UnlockFailed" xml:space="preserve"><value>Unlock failed: {0}</value></data>
+</root>
