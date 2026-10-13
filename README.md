@@ -8,7 +8,10 @@ A modern WinUI 3 control panel for Dell Alienware laptops, built on top of the
 一款基于 [AlienFX-Tools](https://github.com/T-Troll/alienfx-tools) 命令行工具的
 戴尔外星人笔记本现代化 WinUI 3 控制面板。
 
-<img width="550" height="325" alt="image" src="https://github.com/user-attachments/assets/f4a7f4cf-049c-428c-9d77-9f837c330b5a" />
+<img width="40%" alt="image" src="https://github.com/user-attachments/assets/5146c10d-ddc7-4710-8037-bda12a70c870" />
+
+<img width="40%" alt="image" src="https://github.com/user-attachments/assets/63a8957a-cf9f-4d13-8d4f-3f18ad52bd49" />
+
 
 ---
 
