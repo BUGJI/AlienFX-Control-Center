@@ -110,8 +110,12 @@ public static class KeyLayoutStore
 
         layout.Vid = device.VendorId;
         layout.Pid = device.ProductId;
-        layout.Columns = Math.Max(1, (int)Math.Ceiling(layout.Keys.Max(k => k.Col + k.Width)));
-        layout.Rows = Math.Max(1, (int)Math.Ceiling(layout.Keys.Max(k => k.Row + k.Height)));
+        layout.Columns = layout.Keys.Count == 0
+            ? 1
+            : Math.Max(1, (int)Math.Ceiling(layout.Keys.Max(k => k.Col + k.Width)));
+        layout.Rows = layout.Keys.Count == 0
+            ? 1
+            : Math.Max(1, (int)Math.Ceiling(layout.Keys.Max(k => k.Row + k.Height)));
         return layout;
     }
 }

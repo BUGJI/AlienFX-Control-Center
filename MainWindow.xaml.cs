@@ -1,6 +1,8 @@
 using AlienFXControlCenter.Pages;
 using AlienFXControlCenter.Services;
+using AlienFXControlCenter.Services.Input;
 using Microsoft.UI;
+using Microsoft.UI.Dispatching;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -12,6 +14,8 @@ namespace AlienFXControlCenter;
 
 public sealed partial class MainWindow : Window
 {
+    private DispatcherQueueTimer? _infoBarTimer;
+
     public MainWindow()
     {
         try
@@ -36,12 +40,35 @@ public sealed partial class MainWindow : Window
 
             ApplyTheme();
             NavView.SelectedItem = LightsItem;
+
+            KeyActionDispatcher.Current.Message += OnActionFeedback;
         }
         catch (Exception ex)
         {
             Log.Write($"MainWindow init failed: {ex}");
             throw;
         }
+    }
+
+    private void OnActionFeedback(ActionFeedback feedback)
+    {
+        ActionInfoBar.Title = feedback.Title;
+        ActionInfoBar.Message = feedback.Message;
+        ActionInfoBar.Severity = feedback.IsError ? InfoBarSeverity.Error : InfoBarSeverity.Informational;
+        ActionInfoBar.IsOpen = true;
+
+        _infoBarTimer ??= CreateInfoBarTimer();
+        _infoBarTimer.Stop();
+        _infoBarTimer.Start();
+    }
+
+    private DispatcherQueueTimer CreateInfoBarTimer()
+    {
+        var timer = DispatcherQueue.CreateTimer();
+        timer.Interval = TimeSpan.FromSeconds(5);
+        timer.IsRepeating = false;
+        timer.Tick += (_, _) => ActionInfoBar.IsOpen = false;
+        return timer;
     }
 
     private void FitToWorkArea()
@@ -108,6 +135,12 @@ public sealed partial class MainWindow : Window
                     break;
                 case "fans":
                     NavFrame.Navigate(typeof(FansPage));
+                    break;
+                case "keys":
+                    NavFrame.Navigate(typeof(KeysPage));
+                    break;
+                case "templates":
+                    NavFrame.Navigate(typeof(TemplatesPage));
                     break;
             }
         }

@@ -1,3 +1,5 @@
+using AlienFXControlCenter.Helpers;
+using AlienFXControlCenter.Services;
 using AlienFXControlCenter.ViewModels;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -21,4 +23,25 @@ public sealed partial class FansPage : Page
     private async void Apply_Click(object sender, RoutedEventArgs e) => await ViewModel.ApplyAsync();
 
     private async void Unlock_Click(object sender, RoutedEventArgs e) => await ViewModel.UnlockAsync();
+
+    private async void SaveTemplate_Click(object sender, RoutedEventArgs e)
+    {
+        var name = await DialogHelper.PromptTextAsync(
+            XamlRoot,
+            Localizer.Get("Templates_NewTitle"),
+            TemplatesViewModel.SuggestName(),
+            Localizer.Get("Templates_NamePlaceholder"));
+
+        if (name is null)
+            return;
+
+        if (PresetState.IsEmpty)
+        {
+            ViewModel.Status = Localizer.Get("Templates_NoLiveState");
+            return;
+        }
+
+        var template = TemplatesViewModel.SaveCurrentState(name);
+        ViewModel.Status = Localizer.Format("Templates_Saved", template.Name);
+    }
 }

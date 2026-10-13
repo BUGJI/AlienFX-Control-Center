@@ -103,6 +103,8 @@ public sealed partial class LightsViewModel : ObservableObject
                 Status = result.Success
                     ? Localizer.Format("Status_AppliedWhole", hex)
                     : Localizer.Format("Status_ApplyFailed", FirstLine(result.StandardError));
+                if (result.Success)
+                    PresetState.RecordWholeSystem(color);
                 return;
             }
 
@@ -120,6 +122,8 @@ public sealed partial class LightsViewModel : ObservableObject
             Status = outcome.Success
                 ? Localizer.Format("Status_AppliedScope", hex, lights.Count, device.DisplayName)
                 : Localizer.Format("Status_ApplyFailed", FirstLine(outcome.StandardError));
+            if (outcome.Success)
+                PresetState.RecordLights(device.VendorId, device.ProductId, lights, color);
         }
         catch (Exception ex)
         {
@@ -158,6 +162,8 @@ public sealed partial class LightsViewModel : ObservableObject
             Status = result.Success
                 ? Localizer.Format("Status_AppliedKeys", hex, lights.Count, device.DisplayName)
                 : Localizer.Format("Status_ApplyFailed", FirstLine(result.StandardError));
+            if (result.Success)
+                PresetState.RecordLights(device.VendorId, device.ProductId, lights, color);
         }
         catch (Exception ex)
         {

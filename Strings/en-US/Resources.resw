@@ -23,6 +23,8 @@
   <!-- XAML: shell -->
   <data name="Nav_Lights.Content" xml:space="preserve"><value>Lights</value></data>
   <data name="Nav_Fans.Content" xml:space="preserve"><value>Fans</value></data>
+  <data name="Nav_Keys.Content" xml:space="preserve"><value>Keys</value></data>
+  <data name="Nav_Templates.Content" xml:space="preserve"><value>Templates</value></data>
 
   <!-- XAML: lights page -->
   <data name="Lights_Title.Text" xml:space="preserve"><value>Lights</value></data>
@@ -49,6 +51,47 @@
   <data name="Fans_Temperatures.Text" xml:space="preserve"><value>Temperatures</value></data>
   <data name="Fans_Empty_Title.Text" xml:space="preserve"><value>No fan hardware</value></data>
   <data name="Fans_Empty_Message.Text" xml:space="preserve"><value>No compatible fan controller was detected on this system.</value></data>
+  <data name="Fans_SaveTemplate.Content" xml:space="preserve"><value>Save as template</value></data>
+
+  <!-- XAML: lights page (template capture) -->
+  <data name="Lights_SaveTemplate.Content" xml:space="preserve"><value>Save as template</value></data>
+
+  <!-- XAML: templates page -->
+  <data name="Templates_Title.Text" xml:space="preserve"><value>Templates</value></data>
+  <data name="Templates_New.Content" xml:space="preserve"><value>Save current</value></data>
+  <data name="Templates_Import.Content" xml:space="preserve"><value>Import</value></data>
+  <data name="Templates_Refresh.Content" xml:space="preserve"><value>Refresh</value></data>
+  <data name="Templates_Apply.Content" xml:space="preserve"><value>Apply</value></data>
+  <data name="Templates_Rename.Content" xml:space="preserve"><value>Rename</value></data>
+  <data name="Templates_Duplicate.Content" xml:space="preserve"><value>Duplicate</value></data>
+  <data name="Templates_Export.Content" xml:space="preserve"><value>Export</value></data>
+  <data name="Templates_Delete.Content" xml:space="preserve"><value>Delete</value></data>
+  <data name="Templates_Empty_Title.Text" xml:space="preserve"><value>No templates yet</value></data>
+  <data name="Templates_Empty_Message.Text" xml:space="preserve"><value>Set colors on the Lights page and fan speeds on the Fans page, then click "Save current" to store them as a template.</value></data>
+
+  <!-- Code-only: templates -->
+  <data name="Templates_NewTitle" xml:space="preserve"><value>New template</value></data>
+  <data name="Templates_RenameTitle" xml:space="preserve"><value>Rename template</value></data>
+  <data name="Templates_NamePlaceholder" xml:space="preserve"><value>Template name</value></data>
+  <data name="Templates_SelectFirst" xml:space="preserve"><value>Select a template first.</value></data>
+  <data name="Templates_NeedName" xml:space="preserve"><value>Enter a template name.</value></data>
+  <data name="Templates_NoLiveState" xml:space="preserve"><value>Nothing to save — set lights or fans first.</value></data>
+  <data name="Templates_EmptySummary" xml:space="preserve"><value>empty</value></data>
+  <data name="Templates_NothingToApply" xml:space="preserve"><value>This template has nothing to apply.</value></data>
+  <data name="Templates_SummaryLights" xml:space="preserve"><value>{0} light(s)</value></data>
+  <data name="Templates_SummaryFans" xml:space="preserve"><value>{0} fan(s)</value></data>
+  <data name="Templates_Saved" xml:space="preserve"><value>Saved template "{0}".</value></data>
+  <data name="Templates_Renamed" xml:space="preserve"><value>Renamed to "{0}".</value></data>
+  <data name="Templates_RenameFailed" xml:space="preserve"><value>Could not rename to "{0}".</value></data>
+  <data name="Templates_Deleted" xml:space="preserve"><value>Deleted "{0}".</value></data>
+  <data name="Templates_Exported" xml:space="preserve"><value>Exported to {0}</value></data>
+  <data name="Templates_ExportFailed" xml:space="preserve"><value>Export failed: {0}</value></data>
+  <data name="Templates_Imported" xml:space="preserve"><value>Imported "{0}".</value></data>
+  <data name="Templates_ImportFailed" xml:space="preserve"><value>Import failed: {0}</value></data>
+  <data name="Templates_Applied" xml:space="preserve"><value>Applied "{0}" — {1}.</value></data>
+  <data name="Templates_ApplyFailed" xml:space="preserve"><value>Apply failed: {0}</value></data>
+  <data name="Templates_DeleteTitle" xml:space="preserve"><value>Delete template</value></data>
+  <data name="Templates_DeleteBody" xml:space="preserve"><value>Delete "{0}"? This cannot be undone.</value></data>
 
   <!-- XAML: keyboard matrix -->
   <data name="Matrix_SelectAll.Content" xml:space="preserve"><value>Select all</value></data>
@@ -110,6 +153,8 @@
   <!-- Code-only: dialogs -->
   <data name="Dialog_ErrorTitle" xml:space="preserve"><value>Something went wrong</value></data>
   <data name="Dialog_Close" xml:space="preserve"><value>Close</value></data>
+  <data name="Dialog_OK" xml:space="preserve"><value>OK</value></data>
+  <data name="Dialog_Cancel" xml:space="preserve"><value>Cancel</value></data>
 
   <!-- Code-only: status -->
   <data name="Status_Ready" xml:space="preserve"><value>Ready.</value></data>
@@ -135,4 +180,79 @@
   <data name="Status_FanBoostSet" xml:space="preserve"><value>Fan boost set to {0} %.</value></data>
   <data name="Status_UnlockDone" xml:space="preserve"><value>Manual control unlocked. {0}</value></data>
   <data name="Status_UnlockFailed" xml:space="preserve"><value>Unlock failed: {0}</value></data>
+
+  <!-- XAML: keys page -->
+  <data name="Keys_Title.Text" xml:space="preserve"><value>Key registration</value></data>
+  <data name="Keys_Register.Content" xml:space="preserve"><value>Register key</value></data>
+  <data name="Keys_Search.PlaceholderText" xml:space="preserve"><value>Search…</value></data>
+  <data name="Keys_FilterAll.Content" xml:space="preserve"><value>All</value></data>
+  <data name="Keys_FilterCustom.Content" xml:space="preserve"><value>Custom</value></data>
+  <data name="Keys_FilterBuiltIn.Content" xml:space="preserve"><value>Built-in</value></data>
+  <data name="Keys_ResetDefaults.Content" xml:space="preserve"><value>Restore defaults</value></data>
+  <data name="Keys_ColName.Text" xml:space="preserve"><value>Name</value></data>
+  <data name="Keys_ColType.Text" xml:space="preserve"><value>Type</value></data>
+  <data name="Keys_ColSignature.Text" xml:space="preserve"><value>Signature</value></data>
+  <data name="Keys_ColAction.Text" xml:space="preserve"><value>Action</value></data>
+  <data name="Keys_ColSource.Text" xml:space="preserve"><value>Source</value></data>
+  <data name="Keys_ColEnabled.Text" xml:space="preserve"><value>Enabled</value></data>
+  <data name="Keys_ColOps.Text" xml:space="preserve"><value>Actions</value></data>
+  <data name="Keys_Empty_Title.Text" xml:space="preserve"><value>No keys registered</value></data>
+  <data name="Keys_Empty_Message.Text" xml:space="preserve"><value>Click "Register key" and press the key you want to use.</value></data>
+  <data name="Keys_Rename.ToolTipService.ToolTip" xml:space="preserve"><value>Rename</value></data>
+  <data name="Keys_Recapture.ToolTipService.ToolTip" xml:space="preserve"><value>Re-detect</value></data>
+  <data name="Keys_Bind.ToolTipService.ToolTip" xml:space="preserve"><value>Bind action</value></data>
+  <data name="Keys_DeleteRow.ToolTipService.ToolTip" xml:space="preserve"><value>Delete</value></data>
+  <data name="Keys_Diagnostics.Header" xml:space="preserve"><value>Advanced diagnostics</value></data>
+
+  <!-- XAML: keys diagnostics -->
+  <data name="Keys_RawToggle.Header" xml:space="preserve"><value>Raw Input (HID)</value></data>
+  <data name="Keys_HookToggle.Header" xml:space="preserve"><value>Low-level keyboard hook</value></data>
+  <data name="Keys_HideNormal.Content" xml:space="preserve"><value>Hide normal typing keys</value></data>
+  <data name="Keys_TestHotkey.Content" xml:space="preserve"><value>Test hotkey (Ctrl+Alt+K)</value></data>
+  <data name="Keys_Clear.Content" xml:space="preserve"><value>Clear</value></data>
+  <data name="Keys_Refresh.Content" xml:space="preserve"><value>Reload devices</value></data>
+  <data name="Keys_Copy.Content" xml:space="preserve"><value>Copy</value></data>
+  <data name="Keys_Save.Content" xml:space="preserve"><value>Save…</value></data>
+  <data name="Keys_Pause.Content" xml:space="preserve"><value>Pause</value></data>
+
+  <!-- Code-only: keys page -->
+  <data name="Keys_TypeKeyboard" xml:space="preserve"><value>Keyboard</value></data>
+  <data name="Keys_TypeHid" xml:space="preserve"><value>HID</value></data>
+  <data name="Keys_SourceBuiltIn" xml:space="preserve"><value>Built-in</value></data>
+  <data name="Keys_SourceCustom" xml:space="preserve"><value>Custom</value></data>
+  <data name="Keys_ActionNone" xml:space="preserve"><value>None</value></data>
+  <data name="Keys_ActionApplyTemplate" xml:space="preserve"><value>Key action</value></data>
+  <data name="Keys_CaptureTitle" xml:space="preserve"><value>Register key</value></data>
+  <data name="Keys_RenameTitle" xml:space="preserve"><value>Rename key</value></data>
+  <data name="Keys_CaptureHint" xml:space="preserve"><value>Press the key you want to register. It will be captured automatically.</value></data>
+  <data name="Keys_CaptureWaiting" xml:space="preserve"><value>Waiting for a key…</value></data>
+  <data name="Keys_KeyNameHeader" xml:space="preserve"><value>Name</value></data>
+  <data name="Keys_KeyNamePlaceholder" xml:space="preserve"><value>Key name</value></data>
+  <data name="Keys_DuplicateWarn" xml:space="preserve"><value>This key is already registered as "{0}". Saving will rename that entry.</value></data>
+  <data name="Keys_NeedName" xml:space="preserve"><value>Enter a key name.</value></data>
+  <data name="Keys_NameExists" xml:space="preserve"><value>A key with that name already exists.</value></data>
+  <data name="Keys_KeySaved" xml:space="preserve"><value>Registered key "{0}".</value></data>
+  <data name="Keys_KeyUpdated" xml:space="preserve"><value>Updated key "{0}".</value></data>
+  <data name="Keys_Renamed" xml:space="preserve"><value>Renamed to "{0}".</value></data>
+  <data name="Keys_Recaptured" xml:space="preserve"><value>Re-detected "{0}".</value></data>
+  <data name="Keys_Deleted" xml:space="preserve"><value>Deleted "{0}".</value></data>
+  <data name="Keys_DeleteTitle" xml:space="preserve"><value>Delete key</value></data>
+  <data name="Keys_DeleteBody" xml:space="preserve"><value>Delete "{0}"? This cannot be undone.</value></data>
+  <data name="Keys_DeleteAction.Content" xml:space="preserve"><value>Delete</value></data>
+  <data name="Keys_ResetTitle" xml:space="preserve"><value>Restore defaults</value></data>
+  <data name="Keys_ResetBody" xml:space="preserve"><value>Discard all custom keys and restore the built-in keys?</value></data>
+  <data name="Keys_ResetDone" xml:space="preserve"><value>Restored default keys.</value></data>
+  <data name="Keys_BindTitle" xml:space="preserve"><value>Bind action</value></data>
+  <data name="Keys_BindHeader" xml:space="preserve"><value>Action triggered when "{0}" is pressed.</value></data>
+  <data name="Keys_TypingWarn" xml:space="preserve"><value>This is a normal typing key — the action may fire while you type elsewhere.</value></data>
+  <data name="Keys_Bound" xml:space="preserve"><value>"{0}" now switches to template "{1}".</value></data>
+  <data name="Keys_Unbound" xml:space="preserve"><value>Removed the action from "{0}".</value></data>
+  <data name="Keys_TemplateMissing" xml:space="preserve"><value>Template "{0}" no longer exists.</value></data>
+  <data name="Keys_ApplyFailed" xml:space="preserve"><value>Action failed: {0}</value></data>
+  <data name="Keys_Status" xml:space="preserve"><value>Raw Input: {0}, hook: {1}, devices: {2}</value></data>
+  <data name="Keys_Copied" xml:space="preserve"><value>Log copied to clipboard.</value></data>
+  <data name="Keys_Saved" xml:space="preserve"><value>Saved to {0}</value></data>
+  <data name="Keys_HotkeyRegistered" xml:space="preserve"><value>Test hotkey registered — press Ctrl+Alt+K.</value></data>
+  <data name="Keys_HotkeyFailed" xml:space="preserve"><value>Hotkey registration failed (already in use?).</value></data>
+  <data name="Keys_HotkeyUnregistered" xml:space="preserve"><value>Test hotkey unregistered.</value></data>
 </root>

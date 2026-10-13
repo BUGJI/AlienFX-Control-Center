@@ -35,6 +35,7 @@
                 Click="Apply_Click"
                 x:Uid="Fans_Apply"
                 Style="{StaticResource AccentButtonStyle}" />
+            <Button Click="SaveTemplate_Click" x:Uid="Fans_SaveTemplate" />
             <TextBlock
                 Margin="12,0,0,0"
                 VerticalAlignment="Center"

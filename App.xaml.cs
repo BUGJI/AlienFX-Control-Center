@@ -1,6 +1,8 @@
 using System.IO;
 using AlienFXControlCenter.Services;
+using AlienFXControlCenter.Services.Input;
 using Microsoft.UI.Xaml;
+using WinRT.Interop;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -41,11 +43,36 @@ public partial class App : Application
             _window = new MainWindow();
             MainWindow = _window;
             _window.Activate();
+
+            InputService.Current.Start(WindowNative.GetWindowHandle(_window!));
+            KeyActionDispatcher.Current.Start();
+
+            if (SettingsService.Current.Value.AutoApplyOnStartup)
+                _ = ApplyStartupPresetAsync();
         }
         catch (Exception ex)
         {
             Log.Write($"Launch failed: {ex}");
             throw;
+        }
+    }
+
+    private static async Task ApplyStartupPresetAsync()
+    {
+        var template = PresetState.LoadLastApplied();
+        if (template is null || (!template.HasLights && !template.HasFans))
+            return;
+
+        try
+        {
+            var outcome = await TemplateApplier.ApplyAsync(template);
+            Log.Write(
+                $"Auto-apply on startup: fxMissing={outcome.FxMissing}, fanMissing={outcome.FanMissing}, " +
+                $"lights={outcome.LightCount}, fans={outcome.FanCount}");
+        }
+        catch (Exception ex)
+        {
+            Log.Write($"Auto-apply on startup failed: {ex.Message}");
         }
     }
 

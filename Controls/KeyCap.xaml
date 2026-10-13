@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<UserControl
+    x:Class="AlienFXControlCenter.Controls.KeyCap"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Border
+        x:Name="CapBase"
+        Padding="0,0,0,3"
+        Background="{ThemeResource ControlStrongStrokeColorDefaultBrush}"
+        CornerRadius="7">
+        <Border
+            x:Name="Cap"
+            MinWidth="72"
+            MinHeight="46"
+            Padding="10,6"
+            Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+            BorderThickness="1"
+            CornerRadius="6">
+            <StackPanel Spacing="3" VerticalAlignment="Center">
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal"
+                    Spacing="4">
+                    <FontIcon
+                        x:Name="WarnIcon"
+                        VerticalAlignment="Center"
+                        FontSize="11"
+                        Foreground="{ThemeResource SystemFillColorCautionBrush}"
+                        Glyph="&#xE7BA;"
+                        Visibility="Collapsed" />
+                    <TextBlock
+                        x:Name="LabelText"
+                        FontWeight="SemiBold"
+                        TextTrimming="CharacterEllipsis" />
+                </StackPanel>
+                <Border
+                    x:Name="BadgeHost"
+                    Padding="7,1"
+                    HorizontalAlignment="Center"
+                    CornerRadius="7"
+                    Visibility="Collapsed">
+                    <TextBlock
+                        x:Name="BadgeText"
+                        FontSize="11"
+                        TextTrimming="CharacterEllipsis" />
+                </Border>
+            </StackPanel>
+        </Border>
+    </Border>
+</UserControl>

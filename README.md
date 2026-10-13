@@ -30,6 +30,8 @@ A modern WinUI 3 control panel for Dell Alienware laptops, built on top of the
   - 内置取色器与快捷调色板。
   - 可将检测到的灯光布局导出为 JSON，用于校准。
 - **风扇** — 监控风扇转速、最高转速与温度传感器，解锁风扇控制并应用自定义风扇转速百分比。
+- **模板** — 将当前灯光（逐灯珠颜色）与风扇转速保存为命名模板，并可应用、重命名、
+  复制、删除、导入或导出。可从灯光/风扇页面或模板页面保存当前状态。
 - **设置** — 切换界面语言（English / 简体中文）、自动应用、主题、显示/隐藏原始调试输出、
   重新匹配与管理设备校准配置，并指定 AlienFX-Tools 所在文件夹。
 - 支持按设备校准配置的导入与导出。
@@ -94,6 +96,9 @@ AlienFX-Tools 是遵循其自身许可证的独立项目。
   - Export the detected light layout to JSON for calibration.
 - **Fans** — monitor fan RPM, max RPM and temperature sensors, unlock fan control
   and apply custom fan speed percentages.
+- **Templates** — save the current lighting (per-light colors) and fan speeds as a
+  named template, then apply, rename, duplicate, delete, import or export it.
+  Save the live state from the Lights/Fans pages or the Templates page.
 - **Settings** — switch UI language (English / 简体中文), toggle auto-apply, choose
   theme, show/hide raw debug output, rematch and manage device calibration
   profiles, and point the app at your AlienFX-Tools folder.

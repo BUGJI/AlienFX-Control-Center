@@ -134,6 +134,8 @@ public sealed partial class FansViewModel : ObservableObject
             Status = result.Success
                 ? Localizer.Format("Status_FanBoostSet", string.Join(", ", percents))
                 : Localizer.Format("Status_ApplyFailed", FirstLine(result.StandardError));
+            if (result.Success)
+                PresetState.RecordFans(Fans.OrderBy(f => f.Id).Select(f => (f.Id, (string?)f.DisplayName, (int)Math.Round(f.Boost))));
         }
         catch (Exception ex)
         {

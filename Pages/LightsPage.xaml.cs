@@ -172,6 +172,27 @@ public sealed partial class LightsPage : Page
         }
     }
 
+    private async void SaveTemplate_Click(object sender, RoutedEventArgs e)
+    {
+        var name = await DialogHelper.PromptTextAsync(
+            XamlRoot,
+            Localizer.Get("Templates_NewTitle"),
+            TemplatesViewModel.SuggestName(),
+            Localizer.Get("Templates_NamePlaceholder"));
+
+        if (name is null)
+            return;
+
+        if (PresetState.IsEmpty)
+        {
+            ViewModel.Status = Localizer.Get("Templates_NoLiveState");
+            return;
+        }
+
+        var template = TemplatesViewModel.SaveCurrentState(name);
+        ViewModel.Status = Localizer.Format("Templates_Saved", template.Name);
+    }
+
     private void TargetBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         if (_loading || TargetBox.SelectedItem is not DeviceOption option)

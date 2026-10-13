@@ -38,6 +38,25 @@ public sealed partial class AlienFxClient(string exePath)
         return last;
     }
 
+    public async Task<ProcessResult> SetLightColorsAsync(IEnumerable<(int Device, int Light, byte R, byte G, byte B)> targets, CancellationToken ct = default)
+    {
+        var commands = targets
+            .Select(t => $"setone={t.Device},{t.Light},{t.R},{t.G},{t.B}")
+            .ToList();
+
+        if (commands.Count == 0)
+            return new ProcessResult(0, string.Empty, string.Empty);
+
+        ProcessResult last = new(0, string.Empty, string.Empty);
+        for (var offset = 0; offset < commands.Count; offset += MaxCommandsPerInvocation)
+        {
+            var chunk = commands.GetRange(offset, Math.Min(MaxCommandsPerInvocation, commands.Count - offset));
+            last = await ProcessRunner.RunAsync(ExePath, chunk, ct).ConfigureAwait(false);
+        }
+
+        return last;
+    }
+
     public Task<ProcessResult> ProbeAsync(CancellationToken ct = default)
         => ProcessRunner.RunAsync(ExePath, new[] { "probe" }, ct);
 

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="AlienFXControlCenter.Pages.TemplatesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:helpers="using:AlienFXControlCenter.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:AlienFXControlCenter.ViewModels"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <helpers:BoolToVisibilityConverter x:Key="BoolToVisibility" />
+    </Page.Resources>
+
+    <Grid Padding="24,16,24,16" RowSpacing="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Uid="Templates_Title" Style="{StaticResource TitleTextBlockStyle}" />
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="8">
+            <Button
+                Click="New_Click"
+                Style="{StaticResource AccentButtonStyle}"
+                x:Uid="Templates_New" />
+            <Button Click="Import_Click" x:Uid="Templates_Import" />
+            <Button Click="Refresh_Click" x:Uid="Templates_Refresh" />
+            <ProgressRing
+                Width="20"
+                Height="20"
+                VerticalAlignment="Center"
+                IsActive="{x:Bind ViewModel.IsBusy, Mode=OneWay}" />
+        </StackPanel>
+
+        <Grid
+            Grid.Row="2"
+            ColumnSpacing="16"
+            Visibility="{x:Bind ViewModel.HasTemplates, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ListView
+                x:Name="TemplateList"
+                ItemsSource="{x:Bind ViewModel.Templates}"
+                SelectedItem="{x:Bind ViewModel.SelectedTemplate, Mode=TwoWay}"
+                SelectionMode="Single">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="vm:TemplateItem">
+                        <StackPanel Margin="0,4" Spacing="2">
+                            <TextBlock FontWeight="SemiBold" Text="{x:Bind Name}" />
+                            <TextBlock
+                                FontSize="12"
+                                Opacity="0.7"
+                                Text="{x:Bind Summary}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackPanel
+                Grid.Column="1"
+                Spacing="8"
+                VerticalAlignment="Top">
+                <Button
+                    HorizontalAlignment="Stretch"
+                    Click="Apply_Click"
+                    Style="{StaticResource AccentButtonStyle}"
+                    x:Uid="Templates_Apply" />
+                <Button
+                    HorizontalAlignment="Stretch"
+                    Click="Rename_Click"
+                    x:Uid="Templates_Rename" />
+                <Button
+                    HorizontalAlignment="Stretch"
+                    Click="Duplicate_Click"
+                    x:Uid="Templates_Duplicate" />
+                <Button
+                    HorizontalAlignment="Stretch"
+                    Click="Export_Click"
+                    x:Uid="Templates_Export" />
+                <Button
+                    HorizontalAlignment="Stretch"
+                    Click="Delete_Click"
+                    x:Uid="Templates_Delete" />
+            </StackPanel>
+        </Grid>
+
+        <StackPanel
+            Grid.Row="2"
+            HorizontalAlignment="Center"
+            Spacing="6"
+            VerticalAlignment="Center"
+            Visibility="{x:Bind ViewModel.HasTemplates, Mode=OneWay, Converter={StaticResource BoolToVisibility}, ConverterParameter=invert}">
+            <FontIcon
+                FontSize="32"
+                Glyph="&#xE8F1;"
+                Opacity="0.5" />
+            <TextBlock
+                HorizontalAlignment="Center"
+                x:Uid="Templates_Empty_Title"
+                Style="{StaticResource SubtitleTextBlockStyle}" />
+            <TextBlock
+                HorizontalAlignment="Center"
+                MaxWidth="380"
+                x:Uid="Templates_Empty_Message"
+                Opacity="0.7"
+                TextAlignment="Center"
+                TextWrapping="Wrap" />
+        </StackPanel>
+
+        <TextBlock
+            Grid.Row="3"
+            Opacity="0.8"
+            Text="{x:Bind ViewModel.Status, Mode=OneWay}"
+            TextWrapping="Wrap" />
+
+        <Expander Grid.Row="4" x:Uid="Debug" Visibility="{x:Bind ViewModel.ShowDebug, Mode=OneWay}">
+            <TextBlock
+                FontFamily="Consolas"
+                IsTextSelectionEnabled="True"
+                Text="{x:Bind ViewModel.LastCommand, Mode=OneWay}"
+                TextWrapping="Wrap" />
+        </Expander>
+    </Grid>
+</Page>

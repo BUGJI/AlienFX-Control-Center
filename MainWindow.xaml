@@ -14,6 +14,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="48" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -28,9 +29,16 @@
             </TitleBar.IconSource>
         </TitleBar>
 
+        <InfoBar
+            x:Name="ActionInfoBar"
+            Grid.Row="1"
+            Margin="12,4,12,0"
+            IsClosable="True"
+            IsOpen="False" />
+
         <NavigationView
             x:Name="NavView"
-            Grid.Row="1"
+            Grid.Row="2"
             IsBackButtonVisible="Collapsed"
             IsPaneToggleButtonVisible="False"
             SelectionChanged="NavView_SelectionChanged">
@@ -43,6 +51,16 @@
                 <NavigationViewItem x:Name="FansItem" x:Uid="Nav_Fans" Tag="fans">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE9CA;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem x:Name="KeysItem" x:Uid="Nav_Keys" Tag="keys">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE765;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem x:Name="TemplatesItem" x:Uid="Nav_Templates" Tag="templates">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE8F1;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>

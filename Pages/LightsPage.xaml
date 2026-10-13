@@ -39,6 +39,11 @@
                     VerticalAlignment="Bottom"
                     x:Uid="Lights_ExportLayout"
                     Click="Export_Click" />
+                <Button
+                    x:Name="SaveTemplateButton"
+                    VerticalAlignment="Bottom"
+                    x:Uid="Lights_SaveTemplate"
+                    Click="SaveTemplate_Click" />
                 <ProgressRing
                     Width="20"
                     Height="20"

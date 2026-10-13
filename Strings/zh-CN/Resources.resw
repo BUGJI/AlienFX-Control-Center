@@ -23,6 +23,8 @@
   <!-- XAML: shell -->
   <data name="Nav_Lights.Content" xml:space="preserve"><value>灯效</value></data>
   <data name="Nav_Fans.Content" xml:space="preserve"><value>风扇</value></data>
+  <data name="Nav_Keys.Content" xml:space="preserve"><value>按键</value></data>
+  <data name="Nav_Templates.Content" xml:space="preserve"><value>模板</value></data>
 
   <!-- XAML: lights page -->
   <data name="Lights_Title.Text" xml:space="preserve"><value>灯效</value></data>
@@ -49,6 +51,47 @@
   <data name="Fans_Temperatures.Text" xml:space="preserve"><value>温度</value></data>
   <data name="Fans_Empty_Title.Text" xml:space="preserve"><value>未发现风扇硬件</value></data>
   <data name="Fans_Empty_Message.Text" xml:space="preserve"><value>此系统未检测到兼容的风扇控制器。</value></data>
+  <data name="Fans_SaveTemplate.Content" xml:space="preserve"><value>保存为模板</value></data>
+
+  <!-- XAML: lights page (template capture) -->
+  <data name="Lights_SaveTemplate.Content" xml:space="preserve"><value>保存为模板</value></data>
+
+  <!-- XAML: templates page -->
+  <data name="Templates_Title.Text" xml:space="preserve"><value>模板</value></data>
+  <data name="Templates_New.Content" xml:space="preserve"><value>保存当前</value></data>
+  <data name="Templates_Import.Content" xml:space="preserve"><value>导入</value></data>
+  <data name="Templates_Refresh.Content" xml:space="preserve"><value>刷新</value></data>
+  <data name="Templates_Apply.Content" xml:space="preserve"><value>应用</value></data>
+  <data name="Templates_Rename.Content" xml:space="preserve"><value>重命名</value></data>
+  <data name="Templates_Duplicate.Content" xml:space="preserve"><value>复制副本</value></data>
+  <data name="Templates_Export.Content" xml:space="preserve"><value>导出</value></data>
+  <data name="Templates_Delete.Content" xml:space="preserve"><value>删除</value></data>
+  <data name="Templates_Empty_Title.Text" xml:space="preserve"><value>尚无模板</value></data>
+  <data name="Templates_Empty_Message.Text" xml:space="preserve"><value>先在灯效页设置颜色、在风扇页设置转速，然后点击“保存当前”将其存储为模板。</value></data>
+
+  <!-- Code-only: templates -->
+  <data name="Templates_NewTitle" xml:space="preserve"><value>新建模板</value></data>
+  <data name="Templates_RenameTitle" xml:space="preserve"><value>重命名模板</value></data>
+  <data name="Templates_NamePlaceholder" xml:space="preserve"><value>模板名称</value></data>
+  <data name="Templates_SelectFirst" xml:space="preserve"><value>请先选择一个模板。</value></data>
+  <data name="Templates_NeedName" xml:space="preserve"><value>请输入模板名称。</value></data>
+  <data name="Templates_NoLiveState" xml:space="preserve"><value>没有可保存的内容 —— 请先设置灯效或风扇。</value></data>
+  <data name="Templates_EmptySummary" xml:space="preserve"><value>空</value></data>
+  <data name="Templates_NothingToApply" xml:space="preserve"><value>该模板没有可应用的内容。</value></data>
+  <data name="Templates_SummaryLights" xml:space="preserve"><value>{0} 个灯</value></data>
+  <data name="Templates_SummaryFans" xml:space="preserve"><value>{0} 个风扇</value></data>
+  <data name="Templates_Saved" xml:space="preserve"><value>已保存模板“{0}”。</value></data>
+  <data name="Templates_Renamed" xml:space="preserve"><value>已重命名为“{0}”。</value></data>
+  <data name="Templates_RenameFailed" xml:space="preserve"><value>无法重命名为“{0}”。</value></data>
+  <data name="Templates_Deleted" xml:space="preserve"><value>已删除“{0}”。</value></data>
+  <data name="Templates_Exported" xml:space="preserve"><value>已导出到 {0}</value></data>
+  <data name="Templates_ExportFailed" xml:space="preserve"><value>导出失败：{0}</value></data>
+  <data name="Templates_Imported" xml:space="preserve"><value>已导入“{0}”。</value></data>
+  <data name="Templates_ImportFailed" xml:space="preserve"><value>导入失败：{0}</value></data>
+  <data name="Templates_Applied" xml:space="preserve"><value>已应用“{0}” —— {1}。</value></data>
+  <data name="Templates_ApplyFailed" xml:space="preserve"><value>应用失败：{0}</value></data>
+  <data name="Templates_DeleteTitle" xml:space="preserve"><value>删除模板</value></data>
+  <data name="Templates_DeleteBody" xml:space="preserve"><value>确定删除“{0}”？此操作无法撤销。</value></data>
 
   <!-- XAML: keyboard matrix -->
   <data name="Matrix_SelectAll.Content" xml:space="preserve"><value>全选</value></data>
@@ -110,6 +153,8 @@
   <!-- Code-only: dialogs -->
   <data name="Dialog_ErrorTitle" xml:space="preserve"><value>出现问题</value></data>
   <data name="Dialog_Close" xml:space="preserve"><value>关闭</value></data>
+  <data name="Dialog_OK" xml:space="preserve"><value>确定</value></data>
+  <data name="Dialog_Cancel" xml:space="preserve"><value>取消</value></data>
 
   <!-- Code-only: status -->
   <data name="Status_Ready" xml:space="preserve"><value>就绪。</value></data>
@@ -135,4 +180,79 @@
   <data name="Status_FanBoostSet" xml:space="preserve"><value>风扇加速已设为 {0} %。</value></data>
   <data name="Status_UnlockDone" xml:space="preserve"><value>手动控制已解锁。{0}</value></data>
   <data name="Status_UnlockFailed" xml:space="preserve"><value>解锁失败：{0}</value></data>
+
+  <!-- XAML: keys page -->
+  <data name="Keys_Title.Text" xml:space="preserve"><value>按键注册</value></data>
+  <data name="Keys_Register.Content" xml:space="preserve"><value>注册新按键</value></data>
+  <data name="Keys_Search.PlaceholderText" xml:space="preserve"><value>搜索…</value></data>
+  <data name="Keys_FilterAll.Content" xml:space="preserve"><value>全部</value></data>
+  <data name="Keys_FilterCustom.Content" xml:space="preserve"><value>自定义</value></data>
+  <data name="Keys_FilterBuiltIn.Content" xml:space="preserve"><value>内置</value></data>
+  <data name="Keys_ResetDefaults.Content" xml:space="preserve"><value>恢复默认</value></data>
+  <data name="Keys_ColName.Text" xml:space="preserve"><value>名称</value></data>
+  <data name="Keys_ColType.Text" xml:space="preserve"><value>类型</value></data>
+  <data name="Keys_ColSignature.Text" xml:space="preserve"><value>签名</value></data>
+  <data name="Keys_ColAction.Text" xml:space="preserve"><value>动作</value></data>
+  <data name="Keys_ColSource.Text" xml:space="preserve"><value>来源</value></data>
+  <data name="Keys_ColEnabled.Text" xml:space="preserve"><value>启用</value></data>
+  <data name="Keys_ColOps.Text" xml:space="preserve"><value>操作</value></data>
+  <data name="Keys_Empty_Title.Text" xml:space="preserve"><value>尚未注册按键</value></data>
+  <data name="Keys_Empty_Message.Text" xml:space="preserve"><value>点击“注册新按键”，然后按下要使用的按键。</value></data>
+  <data name="Keys_Rename.ToolTipService.ToolTip" xml:space="preserve"><value>重命名</value></data>
+  <data name="Keys_Recapture.ToolTipService.ToolTip" xml:space="preserve"><value>重新识别</value></data>
+  <data name="Keys_Bind.ToolTipService.ToolTip" xml:space="preserve"><value>绑定动作</value></data>
+  <data name="Keys_DeleteRow.ToolTipService.ToolTip" xml:space="preserve"><value>删除</value></data>
+  <data name="Keys_Diagnostics.Header" xml:space="preserve"><value>高级诊断</value></data>
+
+  <!-- XAML: keys diagnostics -->
+  <data name="Keys_RawToggle.Header" xml:space="preserve"><value>Raw Input（HID）</value></data>
+  <data name="Keys_HookToggle.Header" xml:space="preserve"><value>低级键盘钩子</value></data>
+  <data name="Keys_HideNormal.Content" xml:space="preserve"><value>隐藏普通打字按键</value></data>
+  <data name="Keys_TestHotkey.Content" xml:space="preserve"><value>测试热键(Ctrl+Alt+K)</value></data>
+  <data name="Keys_Clear.Content" xml:space="preserve"><value>清空</value></data>
+  <data name="Keys_Refresh.Content" xml:space="preserve"><value>重新枚举设备</value></data>
+  <data name="Keys_Copy.Content" xml:space="preserve"><value>复制</value></data>
+  <data name="Keys_Save.Content" xml:space="preserve"><value>保存…</value></data>
+  <data name="Keys_Pause.Content" xml:space="preserve"><value>暂停</value></data>
+
+  <!-- Code-only: keys page -->
+  <data name="Keys_TypeKeyboard" xml:space="preserve"><value>键盘</value></data>
+  <data name="Keys_TypeHid" xml:space="preserve"><value>HID</value></data>
+  <data name="Keys_SourceBuiltIn" xml:space="preserve"><value>内置</value></data>
+  <data name="Keys_SourceCustom" xml:space="preserve"><value>自定义</value></data>
+  <data name="Keys_ActionNone" xml:space="preserve"><value>无</value></data>
+  <data name="Keys_ActionApplyTemplate" xml:space="preserve"><value>按键动作</value></data>
+  <data name="Keys_CaptureTitle" xml:space="preserve"><value>注册按键</value></data>
+  <data name="Keys_RenameTitle" xml:space="preserve"><value>重命名按键</value></data>
+  <data name="Keys_CaptureHint" xml:space="preserve"><value>请按下要注册的按键，将自动捕获。</value></data>
+  <data name="Keys_CaptureWaiting" xml:space="preserve"><value>等待按键…</value></data>
+  <data name="Keys_KeyNameHeader" xml:space="preserve"><value>名称</value></data>
+  <data name="Keys_KeyNamePlaceholder" xml:space="preserve"><value>按键名称</value></data>
+  <data name="Keys_DuplicateWarn" xml:space="preserve"><value>该按键已注册为“{0}”。保存将重命名该条目。</value></data>
+  <data name="Keys_NeedName" xml:space="preserve"><value>请输入按键名称。</value></data>
+  <data name="Keys_NameExists" xml:space="preserve"><value>已存在同名按键。</value></data>
+  <data name="Keys_KeySaved" xml:space="preserve"><value>已注册按键“{0}”。</value></data>
+  <data name="Keys_KeyUpdated" xml:space="preserve"><value>已更新按键“{0}”。</value></data>
+  <data name="Keys_Renamed" xml:space="preserve"><value>已重命名为“{0}”。</value></data>
+  <data name="Keys_Recaptured" xml:space="preserve"><value>已重新识别“{0}”。</value></data>
+  <data name="Keys_Deleted" xml:space="preserve"><value>已删除“{0}”。</value></data>
+  <data name="Keys_DeleteTitle" xml:space="preserve"><value>删除按键</value></data>
+  <data name="Keys_DeleteBody" xml:space="preserve"><value>确定删除“{0}”？此操作无法撤销。</value></data>
+  <data name="Keys_DeleteAction.Content" xml:space="preserve"><value>删除</value></data>
+  <data name="Keys_ResetTitle" xml:space="preserve"><value>恢复默认</value></data>
+  <data name="Keys_ResetBody" xml:space="preserve"><value>放弃所有自定义按键并恢复内置按键？</value></data>
+  <data name="Keys_ResetDone" xml:space="preserve"><value>已恢复默认按键。</value></data>
+  <data name="Keys_BindTitle" xml:space="preserve"><value>绑定动作</value></data>
+  <data name="Keys_BindHeader" xml:space="preserve"><value>按下“{0}”时触发的动作。</value></data>
+  <data name="Keys_TypingWarn" xml:space="preserve"><value>这是普通打字按键 —— 在其他地方输入时可能误触发动作。</value></data>
+  <data name="Keys_Bound" xml:space="preserve"><value>“{0}”现在切换模板“{1}”。</value></data>
+  <data name="Keys_Unbound" xml:space="preserve"><value>已移除“{0}”的动作。</value></data>
+  <data name="Keys_TemplateMissing" xml:space="preserve"><value>模板“{0}”已不存在。</value></data>
+  <data name="Keys_ApplyFailed" xml:space="preserve"><value>动作失败：{0}</value></data>
+  <data name="Keys_Status" xml:space="preserve"><value>Raw Input：{0}，钩子：{1}，设备：{2}</value></data>
+  <data name="Keys_Copied" xml:space="preserve"><value>日志已复制到剪贴板。</value></data>
+  <data name="Keys_Saved" xml:space="preserve"><value>已保存到 {0}</value></data>
+  <data name="Keys_HotkeyRegistered" xml:space="preserve"><value>测试热键已注册 —— 请按 Ctrl+Alt+K。</value></data>
+  <data name="Keys_HotkeyFailed" xml:space="preserve"><value>热键注册失败（可能已被占用）。</value></data>
+  <data name="Keys_HotkeyUnregistered" xml:space="preserve"><value>测试热键已注销。</value></data>
 </root>
